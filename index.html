@@ -1,0 +1,89 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/Fish-logo.png">
+    <title>Virtual Aquarium</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/dropdown.css">
+</head>
+<body>
+    <div id="top-bar">
+        <div class="selectors-container">
+            <!-- Hamburger icon for small screens -->
+            <input type="checkbox" id="hamburger-icon" class="hamburger-icon">
+            <label id="hamburger-icon-label" class="hamburger-icon" for="hamburger-icon">
+                <svg class="hamburger-icon-image" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                    <line x1="3" y1="12" x2="21" y2="12" stroke="#69dcdc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></line>
+                    <line x1="3" y1="6" x2="21" y2="6" stroke="#15dcdc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></line>
+                    <line x1="3" y1="18" x2="21" y2="18" stroke="#6969dc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></line>
+                </svg>
+            </label>
+
+
+            <div id="checkboxes-container"></div>
+
+            <!-- Radio buttons for selecting audio -->
+            <div id="audio-selection">
+                <input type="radio" id="audio1" name="audio" value="https://github.com/tlq68/e-quarium/raw/main/assets/audio/Fish1.m4a">
+                <label for="audio1">Song 1</label>
+                <input type="radio" id="audio2" name="audio" value="https://github.com/tlq68/e-quarium/raw/main/assets/audio/Fish2.m4a">
+                <label for="audio2">Song 2</label>
+                <input type="radio" id="audio3" name="audio" value="https://github.com/tlq68/e-quarium/raw/main/assets/audio/Fish3.m4a" checked>
+                <label for="audio3">Song 3</label>
+            </div>
+    
+            <div class="slider-container">
+                <label for="fishLimitSlider">Fish Density: </label>
+                <input type="range" id="fishLimitSlider" min="1" max="25" value="10">
+                <span id="fishLimitValue"></span>
+            </div>
+    
+            <button id="toggle-audio-button">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                    <path d="M301.1 34.8C312.6 40 320 51.4 320 64V448c0 12.6-7.4 24-18.9 29.2s-25 3.1-34.4-5.3L131.8 352H64c-35.3 0-64-28.7-64-64V224c0-35.3 28.7-64 64-64h67.8L266.7 40.1c9.4-8.4 22.9-10.4 34.4-5.3zM425 167l55 55 55-55c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-55 55 55 55c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-55-55-55 55c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l55-55-55-55c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0z"/>
+                </svg>
+            </button>
+            
+            
+        </div>
+        <audio id="backgroundAudio" loop>
+            <source type="audio/mp4">
+            Your browser does not support the audio tag.
+        </audio>
+    </div>
+    
+
+    <div id="aquarium-container">
+        <div id="aquarium" class="aquarium-flex-container">
+
+             <!-- Castle element -->
+             <div class="castle" id="castle">
+                <div class="kelp" id="kelp1"><img src="https://github.com/tlq68/e-quarium/blob/main/assets/Kelp.gif?raw=true" alt="Kelp 1"></div>
+                <div class="kelp" id="kelp2"><img src="https://github.com/tlq68/e-quarium/blob/main/assets/Kelp.gif?raw=true" alt="Kelp 2"></div>
+                <img src="https://raw.githubusercontent.com/tlq68/e-quarium/main/assets/Castle%20CLEAR.gif" alt="Castle">
+                <div class="kelp" id="kelp3"><img src="https://github.com/tlq68/e-quarium/blob/main/assets/Kelp.gif?raw=true" alt="Kelp 3"></div>
+                <div class="kelp" id="kelp4"><img src="https://github.com/tlq68/e-quarium/blob/main/assets/Kelp.gif?raw=true" alt="Kelp 4"></div>
+                <div class="kelp" id="kelp5"><img src="https://github.com/tlq68/e-quarium/blob/main/assets/Kelp.gif?raw=true" alt="Kelp 5"></div>
+            </div>
+
+            <div id="chest-container">
+                <div class="chest" id="chest">
+                    <img src="https://raw.githubusercontent.com/tlq68/e-quarium/main/assets/Chest.gif" alt="Treasure chest">
+                </div>
+            </div>
+
+            <!-- Fish container -->
+            <div id="fish-container"></div>
+
+        </div>
+    </div>
+
+    <script type="module" src="js/dropdown.js"></script>
+    <script type="module" src="js/script.js"></script>
+    <script type="module" src="js/audio.js"></script>
+</body>
+</html>
